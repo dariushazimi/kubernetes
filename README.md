@@ -51,7 +51,15 @@ minikube service web1
 
 kubectl get deploy web1 -o=yaml
 kubectl delete deployment web1
+### Imperative vs Declarative
+In the imperative model we tell the api what we want it to do using kubectl
+command. Like run nginx.
+
 kubectl run nginx --image=nginx
+### Declarative model is where we specify exactly what needs to be done using a
+manifest file. i.e. Ensure that this gorup of 5 web servers and 2 db servers are
+running at all times with X exposed ports and these resources allocations. If
+they aren't, restart them.
 
 kubectl apply -f 
 ## Monitoring application
