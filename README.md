@@ -5,6 +5,14 @@ kubectl get pods --all-namespaces
 kubectl get namespace
 kubectl get nodes -o=wide
 kubectl get pods
+kubectl get deployments -o=wide
+or kubectl get deploy
+
+alias kd="kubectl get deployments -o=wide"
+kubectl describe pods OR deployments
+
+google cheat sheets
+https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97#07-zones--regions
 
 # Installing minikube on mac
 
@@ -86,4 +94,6 @@ kubectl scale deploy <deployment-name> --replicas=20
 
 # Autoscaling is possible with the autoscale command
 kubectl autoscale deployment <deployment-name> --min=2 --max=10
-
+### Aliases
+alias kp="kubectl get pods -o=wide"
+kubectl api-resources
